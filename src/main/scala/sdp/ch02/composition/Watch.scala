@@ -1,6 +1,6 @@
 package sdp.ch02.composition
 
-import sdp.ch02.common.{Alarm, ConnectorWithHelper, Notifier}
+import sdp.ch02.common.{Alarm, Notifier}
 
 class Watch(brand: String, initialTime: Long) {
   def getTime: Long = System.currentTimeMillis() - initialTime
