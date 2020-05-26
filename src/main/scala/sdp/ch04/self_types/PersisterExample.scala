@@ -10,7 +10,7 @@ trait Persister[T] {
 }
 
 trait Database[T] {
-  def save(data: T)
+  def save(data: T): Unit
 }
 
 trait MemoryDatabase[T] extends Database[T] {
