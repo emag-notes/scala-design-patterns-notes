@@ -40,9 +40,8 @@ class CompressingInputReader(inputReader: InputReader) extends InputReaderDecora
 }
 
 class Base64EncoderInputReader(inputReader: InputReader) extends InputReaderDecorator(inputReader) {
-  override def readLines(): LazyList[String] = super.readLines().map { line =>
-    Base64.getEncoder.encodeToString(line.getBytes(StandardCharsets.UTF_8))
-  }
+  override def readLines(): LazyList[String] =
+    super.readLines().map { line => Base64.getEncoder.encodeToString(line.getBytes(StandardCharsets.UTF_8)) }
 }
 
 object DecoratorExample {

@@ -36,9 +36,8 @@ trait CompressingInputReaderTrait extends InputReader with LazyLogging {
 }
 
 trait Base64EncoderInputReaderTrait extends InputReader {
-  abstract override def readLines(): LazyList[String] = super.readLines().map { line =>
-    Base64.getEncoder.encodeToString(line.getBytes(StandardCharsets.UTF_8))
-  }
+  abstract override def readLines(): LazyList[String] =
+    super.readLines().map { line => Base64.getEncoder.encodeToString(line.getBytes(StandardCharsets.UTF_8)) }
 }
 
 object StackableTraitBigExample {
