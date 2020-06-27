@@ -35,7 +35,7 @@ class RobotByNameController {
   val history = ListBuffer[() => Unit]()
 
   def issueCommand(command: => Unit): Unit = {
-    command _ +=: history
+    (() => command) +=: history
     command
   }
 
