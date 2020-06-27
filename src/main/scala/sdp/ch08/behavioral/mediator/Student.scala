@@ -3,7 +3,7 @@ package sdp.ch08.behavioral.mediator
 import scala.collection.mutable
 
 trait Notifiable {
-  def notify(message: String)
+  def notify(message: String): Unit
 }
 
 final case class Student(name: String, age: Int) extends Notifiable {
@@ -15,7 +15,7 @@ final case class Group(name: String)
 trait Mediator {
   def addStudentToGroup(student: Student, group: Group): Unit
   def isStudentInGroup(student: Student, group: Group): Boolean
-  def removeStudentFromGroup(student: Student, group: Group)
+  def removeStudentFromGroup(student: Student, group: Group): Unit
   def getStudentsInGroup(group: Group): List[Student]
   def getGroupsForStudent(student: Student): List[Group]
   def notifyStudentsInGroup(group: Group, message: String): Unit
