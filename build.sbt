@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
   "commons-codec"              % "commons-codec"               % "1.14",
   "com.github.tototoshi"       %% "scala-csv"                  % "1.3.6",
   "org.scala-lang.modules"     %% "scala-parallel-collections" % "0.2.0",
+  "org.scalaz"                 %% "scalaz-core"                % "7.3.1",
   "org.scalatest"              %% "scalatest"                  % "3.2.0" % Test
 )
