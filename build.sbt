@@ -9,7 +9,7 @@ scalacOptions ++= Seq(
 addCompilerPlugin(scalafixSemanticdb)
 
 libraryDependencies ++= {
-  val scalazVersion = "7.3.1"
+  val scalazVersion = "7.3.2"
   Seq(
     "org.json4s"                 %% "json4s-jackson"             % "3.6.9",
     "org.slf4j"                  % "slf4j-log4j12"               % "1.7.30",
