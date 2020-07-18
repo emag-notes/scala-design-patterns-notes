@@ -13,15 +13,11 @@ package object monads {
 
   def writeFile(path: String, lines: Iterator[String]): Unit = {
     println(s"Writing file $path")
-    printToFile(new File(path)) { p =>
-      lines.foreach(p.println)
-    }
+    printToFile(new File(path)) { p => lines.foreach(p.println) }
   }
 
   private def printToFile(file: File)(writeOp: PrintWriter => Unit): Unit = {
-    Using(new PrintWriter(file)) { writer =>
-      writeOp(writer)
-    }.fold(
+    Using(new PrintWriter(file)) { writer => writeOp(writer) }.fold(
       err => throw new IOException(err),
       _ => ()
     )
