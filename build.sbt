@@ -19,7 +19,7 @@ libraryDependencies ++= {
     "org.scala-lang.modules"     %% "scala-parallel-collections" % "0.2.0",
     "org.scalaz"                 %% "scalaz-core"                % scalazVersion,
     "org.scalaz"                 %% "scalaz-effect"              % scalazVersion,
-    "com.typesafe.akka"          %% "akka-actor"                 % "2.6.7",
+    "com.typesafe.akka"          %% "akka-actor"                 % "2.6.8",
     "com.h2database"             % "h2"                          % "1.4.200",
     "com.typesafe"               % "config"                      % "1.4.0",
     "org.scalatest"              %% "scalatest"                  % "3.2.0" % Test,
